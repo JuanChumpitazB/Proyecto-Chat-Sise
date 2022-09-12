@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:62058/ServiceWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:62058/ServiceWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:62058/ServiceWCF.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceWCF_ListarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_ListarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveDatosEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveDatosEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveDatosEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveDatosEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_CargarConversacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarConversacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_CargarConversacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarConversacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_RegistrarConversacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarConversacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_RegistrarConversacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarConversacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveCodUsuUltimoMensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsuUltimoMensaje" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveCodUsuUltimoMensaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsuUltimoMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveFechaHoraUltiMensaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveFechaHoraUltiMensaje" />
+  </wsdl:message>
+  <wsdl:message name="IServiceWCF_DevuelveFechaHoraUltiMensaje_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveFechaHoraUltiMensajeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceWCF">
+    <wsdl:operation name="ListarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/ListarEmpleado" message="tns:IServiceWCF_ListarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/ListarEmpleadoResponse" message="tns:IServiceWCF_ListarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveDatosEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveDatosEmpleado" message="tns:IServiceWCF_DevuelveDatosEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveDatosEmpleadoResponse" message="tns:IServiceWCF_DevuelveDatosEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarConversacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/CargarConversacion" message="tns:IServiceWCF_CargarConversacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/CargarConversacionResponse" message="tns:IServiceWCF_CargarConversacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarConversacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/RegistrarConversacion" message="tns:IServiceWCF_RegistrarConversacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/RegistrarConversacionResponse" message="tns:IServiceWCF_RegistrarConversacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsuUltimoMensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveCodUsuUltimoMensaje" message="tns:IServiceWCF_DevuelveCodUsuUltimoMensaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveCodUsuUltimoMensajeResponse" message="tns:IServiceWCF_DevuelveCodUsuUltimoMensaje_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveFechaHoraUltiMensaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveFechaHoraUltiMensaje" message="tns:IServiceWCF_DevuelveFechaHoraUltiMensaje_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceWCF/DevuelveFechaHoraUltiMensajeResponse" message="tns:IServiceWCF_DevuelveFechaHoraUltiMensaje_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceWCF" type="tns:IServiceWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/ListarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveDatosEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DevuelveDatosEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarConversacion">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/CargarConversacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarConversacion">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/RegistrarConversacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsuUltimoMensaje">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DevuelveCodUsuUltimoMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveFechaHoraUltiMensaje">
+      <soap:operation soapAction="http://tempuri.org/IServiceWCF/DevuelveFechaHoraUltiMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceWCF">
+    <wsdl:port name="BasicHttpBinding_IServiceWCF" binding="tns:BasicHttpBinding_IServiceWCF">
+      <soap:address location="http://localhost:62058/ServiceWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

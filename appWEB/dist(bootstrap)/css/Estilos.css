@@ -1,0 +1,13 @@
+﻿body {
+    background-image: url('../../Imagenes/Fondo2.jpg');
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+.titulo{
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    color:#01297d;
+}

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoguearUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contra" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoguearUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoguearUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExisteUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExisteUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExisteUsuarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesencriptarContraseña">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codUsu" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesencriptarContraseñaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DesencriptarContraseñaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevuelveCodUsuLogueado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usu" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevuelveCodUsuLogueadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DevuelveCodUsuLogueadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevuelveCodUsu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="codEmpleado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DevuelveCodUsuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DevuelveCodUsuResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoguearUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:LoguearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="LoguearUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:LoguearUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExisteUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ExisteUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ExisteUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ExisteUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesencriptarContraseñaSoapIn">
+    <wsdl:part name="parameters" element="tns:DesencriptarContraseña" />
+  </wsdl:message>
+  <wsdl:message name="DesencriptarContraseñaSoapOut">
+    <wsdl:part name="parameters" element="tns:DesencriptarContraseñaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevuelveCodUsuLogueadoSoapIn">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsuLogueado" />
+  </wsdl:message>
+  <wsdl:message name="DevuelveCodUsuLogueadoSoapOut">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsuLogueadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DevuelveCodUsuSoapIn">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsu" />
+  </wsdl:message>
+  <wsdl:message name="DevuelveCodUsuSoapOut">
+    <wsdl:part name="parameters" element="tns:DevuelveCodUsuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="LoguearUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loguear</wsdl:documentation>
+      <wsdl:input message="tns:LoguearUsuarioSoapIn" />
+      <wsdl:output message="tns:LoguearUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteUsuario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ExisteUsuario</wsdl:documentation>
+      <wsdl:input message="tns:ExisteUsuarioSoapIn" />
+      <wsdl:output message="tns:ExisteUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarContraseña">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DesemcriptarContraseña</wsdl:documentation>
+      <wsdl:input message="tns:DesencriptarContraseñaSoapIn" />
+      <wsdl:output message="tns:DesencriptarContraseñaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsuLogueado">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DevuelveCodUsuLogueado</wsdl:documentation>
+      <wsdl:input message="tns:DevuelveCodUsuLogueadoSoapIn" />
+      <wsdl:output message="tns:DevuelveCodUsuLogueadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsu">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">DevuelveCodUsuXcodEmpleado</wsdl:documentation>
+      <wsdl:input message="tns:DevuelveCodUsuSoapIn" />
+      <wsdl:output message="tns:DevuelveCodUsuSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoguearUsuario">
+      <soap:operation soapAction="http://tempuri.org/LoguearUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteUsuario">
+      <soap:operation soapAction="http://tempuri.org/ExisteUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarContraseña">
+      <soap:operation soapAction="http://tempuri.org/DesencriptarContraseña" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsuLogueado">
+      <soap:operation soapAction="http://tempuri.org/DevuelveCodUsuLogueado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsu">
+      <soap:operation soapAction="http://tempuri.org/DevuelveCodUsu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoguearUsuario">
+      <soap12:operation soapAction="http://tempuri.org/LoguearUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteUsuario">
+      <soap12:operation soapAction="http://tempuri.org/ExisteUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesencriptarContraseña">
+      <soap12:operation soapAction="http://tempuri.org/DesencriptarContraseña" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsuLogueado">
+      <soap12:operation soapAction="http://tempuri.org/DevuelveCodUsuLogueado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCodUsu">
+      <soap12:operation soapAction="http://tempuri.org/DevuelveCodUsu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:49339/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:49339/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

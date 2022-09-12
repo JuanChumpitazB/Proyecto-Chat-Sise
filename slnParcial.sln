@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appWEB", "appWEB\appWEB.csproj", "{A1515502-80C4-4D6C-845E-90A59BC23872}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB} = {9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}
+		{9AE29F9E-B82E-415A-88AE-895F5330EEF2} = {9AE29F9E-B82E-415A-88AE-895F5330EEF2}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServicioWCF(1)", "ServicioWCF\", "{9AE29F9E-B82E-415A-88AE-895F5330EEF2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62058"
+		Debug.AspNetCompiler.PhysicalPath = "ServicioWCF\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62058\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62058"
+		Release.AspNetCompiler.PhysicalPath = "ServicioWCF\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62058\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62058"
+		SlnRelativePath = "ServicioWCF\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaNegocio", "LogicaNegocio\LogicaNegocio.csproj", "{8E4C18B5-C32D-448C-9EAC-F1C42F6730E9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServicioWeb(2)", "http://localhost:49339", "{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{8e4c18b5-c32d-448c-9eac-f1c42f6730e9}|LogicaNegocio.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49339"
+		Debug.AspNetCompiler.PhysicalPath = "ServicioWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49339\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49339"
+		Release.AspNetCompiler.PhysicalPath = "ServicioWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49339\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ServicioWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1515502-80C4-4D6C-845E-90A59BC23872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1515502-80C4-4D6C-845E-90A59BC23872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1515502-80C4-4D6C-845E-90A59BC23872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1515502-80C4-4D6C-845E-90A59BC23872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE29F9E-B82E-415A-88AE-895F5330EEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE29F9E-B82E-415A-88AE-895F5330EEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE29F9E-B82E-415A-88AE-895F5330EEF2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE29F9E-B82E-415A-88AE-895F5330EEF2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8E4C18B5-C32D-448C-9EAC-F1C42F6730E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4C18B5-C32D-448C-9EAC-F1C42F6730E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4C18B5-C32D-448C-9EAC-F1C42F6730E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4C18B5-C32D-448C-9EAC-F1C42F6730E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEC4A4D-D3D0-4479-9E1F-2AA7678F73CB}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
